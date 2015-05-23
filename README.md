@@ -15,17 +15,18 @@ $ cd gb
 $ export GOPATH=`pwd`
 $ go get github.com/constabulary/gb/...
 $ export GOBIN=$GOPATH/bin
+$ export PATH=$GOBIN:$PATH
 $ go install github.com/constabulary/gb/...
-$ go get github.com/jbuberel/example_gb/...
-$ gb build all
-github.com/constabulary/gb
-github.com/gorilla/context
-github.com/gorilla/mux
-github.com/jbuberel/example_gb/vendor/src/github.com/gorilla/mux
-github.com/jbuberel/example_gb/gbserver
-github.com/constabulary/gb/cmd
-github.com/constabulary/gb/cmd/gb
-github.com/constabulary/gb/cmd/gb-env
-github.com/constabulary/gb/cmd/gb-list
+```
+You should now hav a `gb` command in the `$GOPATH/bin` directory, and on your command `$PATH`. You can now remove the `gb` sources:
 
+```
+$ rm -rf src/github.com/constabulary
+```
+Next, fetch this repository into a fresh directory and build it with the `gb` command:
+```
+$ cd $HOME
+$ git clone https://github.com/jbuberel/example_gb
+$ cd example_gb
+$ gb buid all
 ```
