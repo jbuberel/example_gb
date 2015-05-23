@@ -33,6 +33,11 @@ $ gb buid all
 
 # To deploy this app on Google App Engine
 
+First, make sure you have an account and have defined a project:
+
+* Install the [Google Cloud SDK](https://cloud.google.com/sdk/).
+* Create a project in the [Google Cloud Console](https://console.developers.google.com/project).
+
 Execute the following commands from the directory contiaining the `app.yaml` file:
 ```
 $ gcloud auth login
