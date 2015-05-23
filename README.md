@@ -30,3 +30,14 @@ $ git clone https://github.com/jbuberel/example_gb
 $ cd example_gb
 $ gb buid all
 ```
+
+# To deploy this app on Google App Engine
+
+Execute the following commands from the directory contiaining the `app.yaml` file:
+```
+$ gcloud auth login
+$ gcloud config set project <your-project-name>
+$ gcloud preview app deploy --version myapp ./app.yaml --remote
+$ curl myapp.<your-project-name>.appspot.com
+```
+
